@@ -1,0 +1,71 @@
+<!--Create an input that reads the name, aadhaar number, address, and displays it in the table format.-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration Page</title>
+	</head>
+	<body>
+		<form>
+			<!-- First Name -->
+			<label for="name"> Name: </label>
+			<input type="text" id="name" name="name" placeholder="Enter your name "/>
+			<br/><br/>
+
+			
+      <!--Aadhar Number -->
+			<label for="AadhaarNo">Aadhaar Number: </label>
+			<input type="text" id="AadhaarNo" name="AadhaarNo" placeholder="enter your AadhaarNo" />
+			<br/><br/>
+
+			<!--Address -->
+		  <label for="Address">Address: </label>
+
+			<input type="Address" id="Address" name="Address" placeholder="Enter your Address" />
+			<br/><br/>
+
+			<!-- Submit Button -->
+			<button onclick="readData()">Submit</button>
+		</form>
+		<script>
+			function readData() {
+
+				var name=document.getElementById('name').value;
+				var AadhaarNo=document.getElementById('AadhaarNo').value;
+				var Address=document.getElementById('Address').value;
+				
+				alert('Name: ' + name + ' '  + 'AadhaarNo:'+ AadhaarNo+ ','+Address);
+			}
+		</script>
+    <table border="1">
+      <tr>
+        <th>Name:<th> 
+        <td>
+          <script>
+            var name=document.getElementById('name').value;
+            
+          </script>
+         </td>
+      </tr>
+      <tr>
+        <th>AadhaarNo:<th> 
+        <td>
+          <script >
+          var name=document.getElementById('AadhaarNo').value;
+
+          </script>
+         </td>
+      </tr>
+      <tr>
+        <th>Address:<th> 
+        <td>
+          <script >
+          var name=document.getElementById('Address').value;
+  
+          </script>
+         </td>
+      </tr>
+
+    </table>  
+	</body>
+</html> 

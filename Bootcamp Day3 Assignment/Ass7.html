@@ -1,0 +1,50 @@
+<!--Create an input that reads from radio, checkbox which displays the selected data in separate paragraphs.-->
+
+<!DOCTYPE>
+<html>
+<head>
+	<title>Radiobutton</title>
+</head>
+<body>
+	<form>
+		<p>Select your fav City</p>
+		<input type="radio" id="Newyork" value="Newyork" name="City"/>NewYork
+		<input type="radio" id="Bangkok" value="Bangkok" name="City"/>Bangkok<br/>
+		<label>Pick your fav colors</label><br/>
+		<input type="checkbox" name="White" id="White"/>White<br/>
+		<input type="checkbox" name="Black" id="Black"/>Black<br/>
+		
+	</form>
+	<button onclick="submit()">click me</button>
+	<p id="City"></p><p>your favourite color is</p>
+	<p id="result"></p>
+	<script>
+		function submit()
+		{
+			if(document.getElementById('Newyork').checked==true) {
+				document.getElementById('City').innerHTML='Newyork';
+			} else 
+			if(document.getElementById('Bangkok').checked==true) {
+				document.getElementById('City').innerHTML='Bangkok';
+			}
+			
+			if(White.checked==true&&Black.checked==true)
+			{
+				res='White,Black';
+			}
+			else if(White.checked==true&&Black.checked==false)
+			{
+				res='White';
+			}
+			else if(White.checked==false &&Black.checked==true){
+				res='Black';
+			}
+			else 
+			{
+				res='none';
+			}
+		document.getElementById('result').innerHTML=res;
+		}
+	</script>
+</body>
+</htm	
